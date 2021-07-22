@@ -1,0 +1,131 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Barlow', sans-serif;
+    //font-family: 'Fraunces', serif;
+    font-size: $font-med;
+    
+    background-color: hotpink;
+
+}
+
+li {
+    list-style-type: none;
+}
+
+//Spacing
+
+.container {
+    max-width: 69.375rem;
+    margin: 0 auto;
+
+    &--pall {
+        padding-top: 4.375rem;
+        padding-right: 1.5rem;
+        padding-bottom: 4.375rem;
+        padding-left: 1.5rem;
+
+        @include breakpoint-up(large){
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+    }
+
+    &--py {
+        padding-top: 4.375rem;
+        padding-bottom: 4.375rem;
+
+        @include breakpoint-up(large){
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+    }
+
+    &--px {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    &--pt {
+        padding-top: 4.375rem;
+
+        @include breakpoint-up(large){
+            padding-top: 6rem;
+        }
+    }
+
+    &--pr {
+        padding-right: 1.5rem;
+    }
+
+    &--pb {
+        padding-bottom: 4.375rem;
+
+        @include breakpoint-up(large){
+            padding-bottom: 6rem;
+        }
+    }
+
+    &--pl {
+        padding-left: 1.5rem;
+    }
+}
+
+//Visability
+
+#hide-for-mobile {
+    @include breakpoint-down(medium) {
+        display: none;
+    }
+}
+
+.hide-for-desktop {
+    @include breakpoint-up(large) {
+        display: none;
+    }
+    
+}
+
+//Button 
+a.btn.btn--white {
+    color: black;
+    padding: 1rem 2.75rem;
+
+    &:hover {
+        background-color: rgba($color: #ffffff, $alpha: 0.4);
+        color: $white;  
+    }
+}
+
+a.btn.btn--yellow {
+    color: black;
+    padding: 1rem 2.75rem;
+}
+.btn {
+
+    font-family: 'Fraunces', serif;
+    
+    border-radius: 10rem;
+    border: none;
+
+    &--white {
+        background-color: $white;
+
+        
+    }
+
+    &--yellow {
+        background-color: $yellow;
+    }
+}
