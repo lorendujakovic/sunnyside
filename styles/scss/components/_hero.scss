@@ -1,0 +1,28 @@
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url(../../../assets/images/mobile/image-header.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+
+    @include breakpoint-up('large') {
+        background-image: url('../../../assets/images/desktop/image-header.jpg');
+    }
+
+    &::after {
+        content: url(../../../assets/images/icon-arrow-down.svg);
+        margin-top: 3.75rem;
+
+        -webkit-animation: bounce 2s;
+	        animation: bounce 2s;
+	    -webkit-animation-iteration-count: infinite;
+	        animation-iteration-count: infinite;
+    }
+}

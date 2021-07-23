@@ -15,9 +15,15 @@ body {
     font-family: 'Barlow', sans-serif;
     //font-family: 'Fraunces', serif;
     font-size: $font-med;
-    
-    background-color: hotpink;
+}
 
+h1 {
+    margin: 0;
+    font-family: 'Fraunces', serif;
+    color: $white;
+    font-size: 4rem;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 li {
