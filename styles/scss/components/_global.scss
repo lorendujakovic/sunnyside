@@ -18,7 +18,7 @@ body {
         size: $font-med;
     }
 
-    
+    background-color: #f8f8f8;
 }
 
 h1, h3 {
@@ -109,6 +109,14 @@ li {
     &--pl {
         padding-left: 1.5rem;
     }
+
+    &--pequal {
+        padding: 4.375rem;
+
+        @include breakpoint-up(large) {
+            padding: 6rem;
+        }
+    }
 }
 
 //Visability
@@ -162,6 +170,6 @@ a.btn.btn--yellow {
 //Background for scroll nav
 
 .scroll {
-    background-color: $bg-footer;
+    background-color: rgba($color: $bg-footer, $alpha: 0.8);
     transition: all 300ms ease-in-out;
 }

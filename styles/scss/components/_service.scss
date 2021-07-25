@@ -1,7 +1,34 @@
 .service {
 
+    @include breakpoint-up('medium') {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        
+        grid-template-areas: 
+                            "story1 pic1"
+                            "pic2 story2";
+    }
+
     &__content {
         text-align: center;
+        background-color: $white;
+
+        @include breakpoint-up(medium) {
+            text-align: left;
+        }
+
+        &-first {
+            @include breakpoint-up('medium') {
+                grid-area: story1;
+            }
+        }
+
+        &-secound {
+            @include breakpoint-up('medium') {
+                grid-area: story2;
+            }
+        }
     }
     
     &__image {
@@ -9,22 +36,42 @@
         img {
             height: 310px;
             width: 100%;
-            background-size: cover;
+            background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
-        }
+
+            @include breakpoint-up('medium') {
+                height: auto;
+            }
+        } 
         
+        &-first {
+            @include breakpoint-up('medium') {
+                grid-area: pic1;
+                justify-items: center;
+                align-items: center;
+                background-color: #FFD000;
+            }
+        }
+
+        &-secound {
+            @include breakpoint-up('medium') {
+                grid-area: pic2;
+                justify-items: center;
+                align-items: center;
+
+                background-color: #FF7D6D;
+            }
+        }
     }
 
     &__link {
         position: relative;
-        text-decoration: none;
 
         font-family: 'Fraunces', serif;
-
-        color: $typo-primary;
-
+        text-decoration: none;
         
+        color: $typo-primary;
 
         &--yellow {
             &::after {
@@ -37,6 +84,11 @@
                 width: 100%;
                 background-color: rgba($color: $btn-secondary, $alpha: 0.6);
                 box-shadow: 0 0 5px 4px rgba($color: $btn-secondary, $alpha: 0.6);
+                transition: all 300ms ease-in-out;
+            }
+            &:hover::after {
+                background-color: rgba($color: $btn-secondary, $alpha: 1.0);
+                box-shadow: 0 0 2px 3px rgba($color: $btn-secondary, $alpha: 1.0);
             }
         }
         &--red {
@@ -50,6 +102,13 @@
                 width: 100%;
                 background-color: rgba($color: $btn-primary, $alpha: 0.6);
                 box-shadow: 0 0 5px 4px rgba($color: $btn-primary, $alpha: 0.6);
+                transition: all 300ms ease-in-out;
+            }
+
+            &:hover::after {
+                background-color: rgba($color: $btn-primary, $alpha: 1.0);
+                box-shadow: 0 0 2px 3px rgba($color: $btn-primary, $alpha: 1.0);
+
             }
         }
     }
