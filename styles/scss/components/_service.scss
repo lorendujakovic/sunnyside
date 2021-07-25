@@ -1,0 +1,58 @@
+.service {
+
+    &__content {
+        text-align: center;
+    }
+    
+    &__image {
+
+        img {
+            height: 310px;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+    }
+
+    &__link {
+        position: relative;
+        text-decoration: none;
+
+        font-family: 'Fraunces', serif;
+
+        color: $typo-primary;
+
+        
+
+        &--yellow {
+            &::after {
+                content: " ";
+                display: block;
+                position: absolute;
+                top: 20px;
+                left: 0;
+                height: 1px;
+                width: 100%;
+                background-color: rgba($color: $btn-secondary, $alpha: 0.6);
+                box-shadow: 0 0 5px 4px rgba($color: $btn-secondary, $alpha: 0.6);
+            }
+        }
+        &--red {
+            &::after {
+                content: " ";
+                display: block;
+                position: absolute;
+                top: 20px;
+                left: 0;
+                height: 1px;
+                width: 100%;
+                background-color: rgba($color: $btn-primary, $alpha: 0.6);
+                box-shadow: 0 0 5px 4px rgba($color: $btn-primary, $alpha: 0.6);
+            }
+        }
+    }
+
+
+}

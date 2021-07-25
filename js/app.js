@@ -24,3 +24,15 @@ btnHamburger.addEventListener('click', () => {
 
     }
 });
+
+// Navmenu Background-color change
+
+window.addEventListener('scroll', function() {
+    let offset = window.pageYOffset;
+
+    if (offset > 75) {
+        header.classList.add('scroll')
+    }else{
+        header.classList.remove('scroll')
+    }
+});

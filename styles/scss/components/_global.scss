@@ -12,18 +12,41 @@ body {
     margin: 0;
     padding: 0;
 
-    font-family: 'Barlow', sans-serif;
+    font: {
+        family: 'Barlow', sans-serif;
     //font-family: 'Fraunces', serif;
-    font-size: $font-med;
+        size: $font-med;
+    }
+
+    
+}
+
+h1, h3 {
+   font-family: 'Fraunces', serif;
 }
 
 h1 {
     margin: 0;
-    font-family: 'Fraunces', serif;
+
+    font-size: 3.3rem;
+    
     color: $white;
-    font-size: 4rem;
     text-transform: uppercase;
     text-align: center;
+}
+
+h3 {
+    margin: 0;
+    color: $typo-primary;
+
+    font-size: 2.3rem;
+}
+
+p {
+    color: $typo-content;
+    font-size: $font_sm;
+    font-weight: 600;
+    line-height: 1.9;
 }
 
 li {
@@ -134,4 +157,11 @@ a.btn.btn--yellow {
     &--yellow {
         background-color: $yellow;
     }
+}
+
+//Background for scroll nav
+
+.scroll {
+    background-color: $bg-footer;
+    transition: all 300ms ease-in-out;
 }
