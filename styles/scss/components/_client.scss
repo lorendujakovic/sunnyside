@@ -22,6 +22,7 @@
     &__wrapper {
         @include breakpoint-up(medium) {
             display: flex;
+            flex-wrap: wrap;
         }
     }
 
@@ -30,6 +31,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        flex: 1 2 330px;
         
 
         text-align: center;
@@ -38,10 +40,9 @@
             margin-bottom: 4rem;
         }
 
-        @include breakpoint-up(medium) {
+        @include breakpoint-up(large) {
             &:not(:last-child) {
                 margin-bottom: 0;
-                padding-right: 1.5rem;
             }
         }
 
@@ -54,7 +55,7 @@
         &-copy {
             margin: 0;
             margin-bottom: 2.5rem;
-            font-size: $font-med;
+            font-size: $font-sm;
 
             color: $typo-client;
         }
