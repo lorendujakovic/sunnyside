@@ -1,0 +1,77 @@
+.client {
+    background-color: #FFFBF8;
+
+   
+
+    h4 {
+        font: {
+            size: 1.5rem;
+            family: 'Fraunces', serif;
+        }
+
+        margin-bottom: 4rem;
+
+        color: $typo-content;
+
+        text-align: center;
+
+        text-transform: uppercase;
+
+    }
+
+    &__wrapper {
+        @include breakpoint-up(medium) {
+            display: flex;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+
+        text-align: center;
+
+        &:not(:last-child) {
+            margin-bottom: 4rem;
+        }
+
+        @include breakpoint-up(medium) {
+            &:not(:last-child) {
+                margin-bottom: 0;
+                padding-right: 1.5rem;
+            }
+        }
+
+        img {
+            width: 25%;
+            border-radius: 50%;
+            margin-bottom: 2.5rem;
+        }
+
+        &-copy {
+            margin: 0;
+            margin-bottom: 2.5rem;
+            font-size: $font-med;
+
+            color: $typo-client;
+        }
+
+        &-name {
+            margin: 0;
+            margin-bottom: 0.5rem;
+            font: {
+                family: 'Fraunces';
+                size: $font-lg;
+            }
+            color: $typo-primary;
+        }
+
+        &-postion {
+            margin: 0;
+        }
+
+    }
+}

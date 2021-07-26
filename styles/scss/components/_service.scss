@@ -3,11 +3,12 @@
     @include breakpoint-up('medium') {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
         
         grid-template-areas: 
                             "story1 pic1"
-                            "pic2 story2";
+                            "pic2 story2"
+                            "graph photo";
     }
 
     &__content {
@@ -109,6 +110,61 @@
                 background-color: rgba($color: $btn-primary, $alpha: 1.0);
                 box-shadow: 0 0 2px 3px rgba($color: $btn-primary, $alpha: 1.0);
 
+            }
+        }
+    }
+
+    &__offer {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        width: 100%;
+        height: 595px;
+
+        text-align: center;
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        @include breakpoint-up(medium) {
+            height: 100%;
+            
+            transition: transform 300ms ease-in-out;
+
+            &:hover {
+                transform: scale(1.01) rotate(0.01deg);
+            }
+        }
+
+
+        &-graph {
+
+            background-image: url('../../../assets/images/mobile/image-graphic-design.jpg');
+            
+            h4, p {
+                color: $typo-graphic;
+            }
+
+            @include breakpoint-up(medium) {
+                grid-area: graph;
+                
+                background-image: url('../../../assets/images/desktop/image-graphic-design.jpg');
+            }
+        }
+
+        &-photo {
+            background-image: url('../../../assets/images/mobile/image-photography.jpg');
+            
+            h4, p {
+                color: $typo-photo;
+            }
+
+            @include breakpoint-up(medium) {
+                grid-area: photo;
+                
+                background-image: url('../../../assets/images/desktop/image-photography.jpg');
             }
         }
     }
