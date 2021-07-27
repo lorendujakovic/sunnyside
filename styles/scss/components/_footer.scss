@@ -26,13 +26,13 @@
         padding-left: 0;
         padding-bottom: 5rem;
 
-
         @include breakpoint-up(medium) {
             width: 30%;
         }
 
         &-item {
             list-style-type: none;
+
             a {
                 color: $typo-graphic;
                 text-decoration: none;
@@ -41,7 +41,6 @@
                     color: $white;
                 }
             }
-            
         }
     }
 
@@ -61,10 +60,13 @@
         @include breakpoint-up(medium) {
             width: 15%;
         }
-    }
-    
-    
+    }   
 }
-.attribution { font-size: 11px; text-align: center; }
+
+.attribution { 
+    font-size: 11px; text-align: center;
     
-.attribution a { color: hsl(228, 45%, 44%); }
+    a {
+        color: hsl(228, 45%, 44%); 
+    }
+}

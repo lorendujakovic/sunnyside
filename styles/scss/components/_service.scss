@@ -13,7 +13,7 @@
 
     &__content {
         text-align: center;
-        background-color: $white;
+        background-color: $beige;
 
         @include breakpoint-up(medium) {
             text-align: left;
@@ -37,6 +37,7 @@
         img {
             height: 310px;
             width: 100%;
+
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
@@ -51,6 +52,7 @@
                 grid-area: pic1;
                 justify-items: center;
                 align-items: center;
+
                 background-color: #FFD000;
             }
         }
@@ -69,8 +71,11 @@
     &__link {
         position: relative;
 
+        font-size: $font-sm;
+        font-weight: 900;
         font-family: 'Fraunces', serif;
         text-decoration: none;
+        text-transform: uppercase;
         
         color: $typo-primary;
 
@@ -87,21 +92,28 @@
                 box-shadow: 0 0 5px 4px rgba($color: $btn-secondary, $alpha: 0.6);
                 transition: all 300ms ease-in-out;
             }
+
             &:hover::after {
                 background-color: rgba($color: $btn-secondary, $alpha: 1.0);
                 box-shadow: 0 0 2px 3px rgba($color: $btn-secondary, $alpha: 1.0);
             }
         }
+
         &--red {
             &::after {
-                content: " ";
+                content: "";
+
                 display: block;
+
                 position: absolute;
                 top: 20px;
                 left: 0;
+
                 height: 1px;
                 width: 100%;
+
                 background-color: rgba($color: $btn-primary, $alpha: 0.6);
+
                 box-shadow: 0 0 5px 4px rgba($color: $btn-primary, $alpha: 0.6);
                 transition: all 300ms ease-in-out;
             }
@@ -109,7 +121,6 @@
             &:hover::after {
                 background-color: rgba($color: $btn-primary, $alpha: 1.0);
                 box-shadow: 0 0 2px 3px rgba($color: $btn-primary, $alpha: 1.0);
-
             }
         }
     }
@@ -123,10 +134,19 @@
         height: 595px;
 
         text-align: center;
+        
 
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+
+        p {
+            font-size: $font-sm;
+
+            @include breakpoint-up (large) {
+                font-size: $font-med;
+            }
+        }
 
         @include breakpoint-up(medium) {
             height: 100%;
@@ -140,7 +160,6 @@
 
 
         &-graph {
-
             background-image: url('../../../assets/images/mobile/image-graphic-design.jpg');
             
             h4, p {
@@ -168,6 +187,4 @@
             }
         }
     }
-
-
 }

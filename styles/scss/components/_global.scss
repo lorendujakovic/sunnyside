@@ -1,5 +1,6 @@
 html {
     font-size: 100%;
+
     box-sizing: border-box;
 
     scroll-behavior: smooth;
@@ -16,7 +17,6 @@ body {
 
     font: {
         family: 'Barlow', sans-serif;
-    //font-family: 'Fraunces', serif;
         size: $font-med;
     }
 
@@ -29,17 +29,20 @@ h1, h3, h4 {
 }
 
 h1 {
-    font-size: 3.3rem;
-    
+    font-size: 2.5rem;
     color: $white;
     text-transform: uppercase;
     text-align: center;
+    letter-spacing: 8px;
+
+    @include breakpoint-up(large) {
+        font-size: 3.5rem;
+    }
 }
 
 h3 {
     color: $typo-primary;
-
-    font-size: 2.3rem;
+    font-size: 2rem;
 }
 
 h4 {
@@ -48,7 +51,7 @@ h4 {
 
 p {
     color: $typo-content;
-    font-size: $font_sm;
+    font-size: $font_med;
     font-weight: 600;
     line-height: 1.9;
 }
@@ -60,7 +63,7 @@ li {
 //Spacing
 
 .container {
-    max-width: 69.375rem;
+    max-width: 90rem;
     margin: 0 auto;
 
     &--pall {
@@ -115,21 +118,25 @@ li {
     }
 
     &--pequal {
-        padding: 2.375rem;
+        padding: 2rem;
+
+        @include breakpoint-up(medium) {
+            padding: 5rem;
+        }
 
         @include breakpoint-up(large) {
-            padding: 3rem;
+            padding: 9rem
         }
     }
     &--poffer {
-        padding-left: 4rem;
-        padding-right: 4rem;
-        padding-bottom: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-bottom: 2rem;
 
 
         @include breakpoint-up(large) {
-            padding-left: 7rem;
-            padding-right: 7rem;
+            padding-left: 4rem;
+            padding-right: 4rem;
             padding-bottom: 2rem;
         }
     }
@@ -146,8 +153,7 @@ li {
 .hide-for-desktop {
     @include breakpoint-up(large) {
         display: none;
-    }
-    
+    }  
 }
 
 //Button 
@@ -165,8 +171,8 @@ a.btn.btn--yellow {
     color: black;
     padding: 1rem 2.75rem;
 }
-.btn {
 
+.btn {
     font-family: 'Fraunces', serif;
     
     border-radius: 10rem;
@@ -174,8 +180,6 @@ a.btn.btn--yellow {
 
     &--white {
         background-color: $white;
-
-        
     }
 
     &--yellow {

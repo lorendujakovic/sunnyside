@@ -1,9 +1,11 @@
+//Variables Elements 
 const btnHamburger = document.querySelector('#btnHamburger');
 const body = document.querySelector('body');
 const header = document.querySelector('.header');
 const menu = document.querySelector('.header__menu');
 const fadeElems = document.querySelectorAll('.has-fade');
 
+//Open and Close Hamburger
 btnHamburger.addEventListener('click', () => {
     if (header.classList.contains('open')) { //Close Hamburger Element
         header.classList.remove('open');
@@ -20,13 +22,10 @@ btnHamburger.addEventListener('click', () => {
             element.classList.remove('fade-out');
             element.classList.add('fade-in');
         });
-        
-
     }
 });
 
 // Navmenu Background-color change
-
 window.addEventListener('scroll', function() {
     let offset = window.pageYOffset;
 

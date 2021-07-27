@@ -1,7 +1,6 @@
 //Colors
 
 //### Primary
-
 $softRed: hsl(7, 99%, 70%);
 $yellow: hsl(51, 100%, 49%);
 //(graphic design text)
@@ -12,15 +11,16 @@ $darkBlue : hsl(198, 62%, 26%);
 $darkModerateCyan: hsl(168, 34%, 41%);
 
 //### Neutral
-
 $veryDarkDesaturatedBlue: hsl(212, 27%, 19%);
 $veryDarkGrayishBlue: hsl(213, 9%, 39%);
 $darkGrayishBlue: hsl(232, 10%, 55%);
 $GrayishBlue: hsl(210, 4%, 67%);
 $white: hsl(0, 0%, 100%);
+$beige: #FFFBF8;
 
 $bg-primary: $white;
 $bg-footer: $darkModerateCyan;
+$bg-content: $beige;
 
 
 $btn-primary: $softRed;
@@ -34,7 +34,6 @@ $typo-photo: $darkBlue;
 $typo-client: $veryDarkGrayishBlue;
 
 //Font Sizes
-
 $font_sm: 0.875rem; //14px
 $font-med: 1.125rem; //18px
 $font-lg: 1.25rem; //20px
